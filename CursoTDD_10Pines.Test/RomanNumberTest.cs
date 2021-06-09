@@ -95,5 +95,27 @@ namespace CursoTDD_10Pines.Test
             Assert.Equal("XLVII", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(47));
             Assert.Equal("XLIX", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(49));
         }
+
+        [Fact]
+        public void Test050To089()
+        {
+            Assert.Equal("LI", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(51));
+            Assert.Equal("LIII", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(53));
+            Assert.Equal("LXI", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(61));
+            Assert.Equal("LXXI", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(71));
+            Assert.Equal("LXXXI", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(81));
+        }
+
+        [Fact]
+        public void Test090To099()
+        {
+            Assert.Equal("XC", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(90));
+            Assert.Equal("XCI", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(91));
+            Assert.Equal("XCIII", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(93));
+            Assert.Equal("XCV", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(95));
+            Assert.Equal("XCVII", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(97));
+            Assert.Equal("XCIX", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(99));
+        }
+
     }
 }
