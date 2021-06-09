@@ -6,12 +6,19 @@ namespace CursoTDD_10Pines
 {
     internal class RomanNumberTextRepresentation
     {
+        public const string ROMAN_NUMBER_HAS_NO_ZERO = "No existe representacion del 0 en numero romanos.";
+
         internal IEnumerable<char> Of(int aNumber)
         {
+            if (aNumber == 0)
+                throw new Exception(ROMAN_NUMBER_HAS_NO_ZERO);
+
             StringBuilder aStringBuilder = new StringBuilder();
             int units = aNumber % 10;
             int tens = ( aNumber / 10 ) % 10;
+            int hundreds = (aNumber / 100) % 10;
 
+            ConvertDigitUsing(hundreds, aStringBuilder, 'C', 'D', 'M');
             ConvertDigitUsing(tens, aStringBuilder, 'X', 'L', 'C');
             ConvertDigitUsing(units, aStringBuilder);
 

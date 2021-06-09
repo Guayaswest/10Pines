@@ -117,5 +117,26 @@ namespace CursoTDD_10Pines.Test
             Assert.Equal("XCIX", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(99));
         }
 
+        [Fact]
+        public void Test100To999()
+        {
+            Assert.Equal("C", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(100));
+            Assert.Equal("CXLIX", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(149));
+            Assert.Equal("DCCC", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(800));
+            Assert.Equal("CMXCIX", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(999));
+        }
+
+        [Fact]
+        public void Test000()
+        {
+            var exception = Assert.Throws<Exception>(
+                () => new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(0)
+            );
+            Assert.Equal(
+                CursoTDD_10Pines.RomanNumberTextRepresentation.ROMAN_NUMBER_HAS_NO_ZERO, 
+                exception.Message
+            );
+        }
+
     }
 }
