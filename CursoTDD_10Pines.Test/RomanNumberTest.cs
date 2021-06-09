@@ -65,5 +65,35 @@ namespace CursoTDD_10Pines.Test
         {
             Assert.Equal("XII", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(12));
         }
+
+        [Fact]
+        public void Test020To029()
+        {
+            Assert.Equal("XXI", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(21));
+            Assert.Equal("XXIII", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(23));
+            Assert.Equal("XXV", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(25));
+            Assert.Equal("XXVII", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(27));
+            Assert.Equal("XXIX", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(29));
+        }
+
+        [Fact]
+        public void Test030To039()
+        {
+            Assert.Equal("XXXI", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(31));
+            Assert.Equal("XXXIII", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(33));
+            Assert.Equal("XXXV", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(35));
+            Assert.Equal("XXXVII", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(37));
+            Assert.Equal("XXXIX", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(39));
+        }
+
+        [Fact]
+        public void Test040To049()
+        {
+            Assert.Equal("XLI", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(41));
+            Assert.Equal("XLIII", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(43));
+            Assert.Equal("XLV", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(45));
+            Assert.Equal("XLVII", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(47));
+            Assert.Equal("XLIX", new CursoTDD_10Pines.RomanNumberTextRepresentation().Of(49));
+        }
     }
 }
