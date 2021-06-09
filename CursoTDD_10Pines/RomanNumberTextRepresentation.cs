@@ -4,11 +4,11 @@ using System.Text;
 
 namespace CursoTDD_10Pines
 {
-    internal class RomanNumberTextRepresentation
+    public class RomanNumberTextRepresentation
     {
         public const string ROMAN_NUMBER_HAS_NO_ZERO = "No existe representacion del 0 en numero romanos.";
 
-        internal IEnumerable<char> Of(int aNumber)
+        public IEnumerable<char> Of(int aNumber)
         {
             if (aNumber == 0)
                 throw new Exception(ROMAN_NUMBER_HAS_NO_ZERO);
